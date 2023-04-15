@@ -30,7 +30,9 @@ main {
 }
 
 .memoire {
-  font-family: "Nunito Sans Bold", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
   position: fixed;
   top: var(--marge);
   right: var(--marge);
@@ -40,6 +42,8 @@ main {
 }
 
 #bouton {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
   overflow: visible;
   position: fixed;
   top: var(--marge);
@@ -70,36 +74,41 @@ main {
 }
 
 .intro {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
   width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 40px;
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 .projets {
-  font-size: 30px;
+  position: absolute;
+  bottom: 20px; 
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
-  margin-top: 125px;
+  margin-top: 60px;
 }
 
 .projets p:hover {
   text-decoration: underline;
 }
 
-.circle {
-  border-radius: 40px;
-  width: 45px;
-  height: 45px;
-  margin: 1px;
-  padding: 5px 0;
-  border: 2px solid black;
-  justify-content: center;
-  text-align: center;
+.projet{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 
+img{
+  margin-right: 8px;
 }

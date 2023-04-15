@@ -1,7 +1,7 @@
-const fonts = ["Modak", "Climate Crisis", "Londrina Outline"];
-const fonts_size = [150, 100, 160];
-const fonts_height = [1, 1.5, 1];
-const fonts_background = ["#FFFFFF", "#A5C9FF", "#D1FFD3"];
+const fonts = ["Modak", "Climate Crisis","Typefesse", "Londrina Outline","PP Mondwest"];
+const fonts_size = [150, 100,100, 160,100];
+const fonts_height = [1, 1.5, 1,1,1];
+const fonts_background = ["#FFFFFF", "#A5C9FF","#f4a8d9", "#D1FFD3","#cfb4f9"];
 let font_index = 0;
 
 $(document).ready(function () {

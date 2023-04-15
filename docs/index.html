@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Les choix typographiques</title>
-
+    <title>Le choix typographique</title>
+    <link rel="preload" as="font" href="/fonts/PPMondwest-Regular.otf" type="font/opentype" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/Typefesse_Pleine.otf" type="font/opentype" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       WebFont.load({
         google: {
-          families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans", "Nunito Sans Bold"],
+          families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700"],
         },
       });
     </script>
@@ -38,7 +39,7 @@
     <main>
       <button id="bouton">Clique !</button>
       <div class="haut">
-        <h1 id="main_title">Les choix<br />typographiques</h1>
+        <h1 id="main_title">Le choix<br />typographique</h1>
       </div>
       <div class="memoire">
         <p>Mémoire de DSAA<br />Maëlys Gloro</p>
@@ -64,8 +65,14 @@
         </p>
       </div>
       <div class="projets">
-        <span class="circle">1</span><p>- Le jeu Attrape-Font</p>
-        <span class="circle">2</span><p>- Les interactions textes dans InDesign</p>
+        <div class="projet">
+          <img src="img/1.svg" alt="">
+          <p>Le jeu Attrape-Font</p>
+        </div>
+        <div class="projet">
+          <img src="img/2.svg" alt="">
+          <p>Les interactions textes dans InDesign</p>
+        </div>
       </div>
     </main>
 
