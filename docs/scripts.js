@@ -93,9 +93,10 @@ function setup() {
   paddle = new Paddle();
 
   myInput = createInput('Aa');
+  myInput.parent("p5");
   myInput.style('font-size', '25px');
   myInput.size(AUTO, 30);
-  myInput.position(20, 20);
+  myInput.position(50, 20);
   myInput.input(typing);
 
   myText = '';
