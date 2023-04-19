@@ -1,0 +1,153 @@
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #E6D6FF;
+}
+
+main {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  overflow: visible;
+
+  background-image: url("../img/body.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#croixctn{
+  position: absolute;
+  width: 1036px;
+  height: 585px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.croix{
+  width:58px;
+  height:17px;
+  margin-top: 15px;
+  margin-right: 35px;
+  background-image: url("../img/croixnoire.png");
+}
+
+.consignectn{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/consigne.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container{
+  position: absolute;
+  width: 1001.6px;
+  height: 483.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagectn{
+  background-image: url("../img/accueil.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  text-decoration: none;
+  overflow: visible;
+
+  color: black;
+  background-color: #E6D6FF;
+  text-align: center;
+
+  width: auto;
+  height: auto;
+  border-radius: 30px;
+  border: 2px solid black;
+  box-shadow: 3px 3px black;
+  padding: 3px 40px 3px 40px;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #c3a3f4;
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px;
+}
+
+#jouer{
+  margin-top: 35%;
+}
+
+#ok, #ok3{
+ display: none;
+ margin-top: 35%;
+ margin-left: 80%;
+}
+
+#ok2{
+  display: none;
+  margin-top: 35%;
+  margin-left: 5%;
+  margin-right: 3%;
+}
+
+#classique{
+  display: none;
+  font-size: 15px;
+  margin-left: 14%;
+  margin-right: 0.5%;
+  margin-top: 35%;
+}
+
+#vs{
+  display: none;
+  font-size: 15px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-top: 35%;
+}
+
+#panier{
+  display: none;
+  font-size: 15px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-top: 35%;
+}
+
+#p5{
+  background-color: #E6D6FF;
+  position: absolute;
+  display: none;
+}
+
+#notice{
+  font-size: 15px;
+  position: absolute;
+  display: none;
+  padding: 3px 10px 3px 10px;
+  box-shadow: none;
+  margin-bottom: 45%;
+}

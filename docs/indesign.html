@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Le jeu Attrape-Font</title>
+    <link rel="preload" as="font" href="/fonts/PPMondwest-Regular.otf" type="font/opentype" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/Typefesse_Pleine.otf" type="font/opentype" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700,900", "Montserrat:400,900"],
+        },
+      });
+    </script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <link rel="stylesheet" href="css/indesign.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="indesign.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="consignectn"></div>
+
+      <div id="p5"></div>
+
+      <div class="container">
+        <button id="circulaire" class="button">Liste circulaire</button>
+        <button id="emotion" class="button">Curseurs d'émotion</button>
+        <button id="choix" class="button">Choix multiples</button>
+      </div>
+
+      <a href="index.html"><div class="croix"></div></a>
+
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

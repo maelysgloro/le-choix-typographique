@@ -19,9 +19,11 @@ main {
 }
 
 #main_title {
+  display: inline;
   font-family: "Modak", sans-serif;
   font-size: 150px;
   margin: 0;
+  vertical-align: top;
 }
 
 .haut {
@@ -41,7 +43,7 @@ main {
   padding: 1em;
 }
 
-#bouton {
+#clique {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   overflow: visible;
@@ -86,7 +88,7 @@ main {
 
 .projets {
   position: absolute;
-  bottom: 20px; 
+  bottom: 20px;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -98,7 +100,11 @@ main {
   margin-top: 60px;
 }
 
-.projets p:hover {
+a{
+  text-decoration: none;
+}
+
+.projet:hover {
   text-decoration: underline;
 }
 
@@ -111,4 +117,13 @@ main {
 
 img{
   margin-right: 8px;
+}
+
+
+@media screen and (max-width:800px){
+
+  .haut, .memoire, .intro, .projets, #clique{
+    display: none;
+  }
+
 }
