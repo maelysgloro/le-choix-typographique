@@ -36,7 +36,7 @@ $(document).ready(function () {
     
     
     var typo = [];
-    var fonts = ["Comic Sans MS", "Futura", "Courier New", "Montserrat", "Didot"];
+    var fonts = ["Antic Didone", "Bitter", "Climate Crisis", "Comfortaa", "Cormorant Garamond", "Courier Prime", "Goldman", "Modak", "Montserrat", "Oswald", "Pinyon Script", "Playfair Display", "Roboto Mono", "Sacramento", "Uncial Antiqua"];
     var index;
     var y = 0;
     var x = 10;
@@ -100,7 +100,7 @@ $(document).ready(function () {
         this.x = random(width);
         this.y = random(-3000, 0);
         this.c = color(0);
-        this.index = round(random(0, 4));
+        this.index = round(random(0, 14));
       }
 
       checkPaddle(p){
