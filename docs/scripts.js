@@ -21,16 +21,64 @@ $(document).ready(function () {
   });
 
   $("#ok").on("click", function () {
-    $(".container").css("justify-content", "space-between");
+    $("#button").css("justify-content", "space-between");
     $("#pagectn").css("background", "none");
     $(".consignectn").css("background-image", "none");
     $("#ok").css("display", "none");
     $("#ok2").css("display", "block");
-    $("#classique").css("display", "block");
     $("#vs").css("display", "block");
     $("#panier").css("display", "block");
-    $("#p5").css("display", "block");
+    $("#classique").css("display", "block");
     $("#notice").css("display", "block");
+    $("#barre").css("display", "flex");
+    
+    $("#classique").css("color", "#E6D6FF");
+    $("#classique").css("background-color", "black");
+    $("#p5_classique").css("display", "block");
+  });
+
+  $("#classique").on("click", function () {
+    $("#classique").css("color", "#E6D6FF");
+    $("#classique").css("background-color", "black");
+    $("#p5_classique").css("display", "block");
+
+    $("#vs").css("color", "black");
+    $("#vs").css("background-color", "#E6D6FF");
+    $("#p5_vs").css("display", "none");
+    $("#panier").css("color", "black");
+    $("#panier").css("background-color", "#E6D6FF");
+    $("#p5_panier").css("display", "none");
+
+  });
+
+  $("#vs").on("click", function () {
+    $("#vs").css("color", "#E6D6FF");
+    $("#vs").css("background-color", "black");
+    $("#p5_vs").css("display", "block");
+    
+    $("#classique").css("color", "black");
+    $("#classique").css("background-color", "#E6D6FF");
+    $("#p5_classique").css("display", "none");
+    $("#panier").css("color", "black");
+    $("#panier").css("background-color", "#E6D6FF");
+    $("#p5_panier").css("display", "none");
+
+  });
+
+  $("#panier").on("click", function () {
+    $("#panier").css("color", "#E6D6FF");
+    $("#panier").css("background-color", "black");
+    //$("#p5_panier").css("display", "block");
+    
+    $("#vs").css("color", "black");
+    $("#vs").css("background-color", "#E6D6FF");
+    $("#p5_vs").css("display", "none");
+    $("#classique").css("color", "black");
+    $("#classique").css("background-color", "#E6D6FF");
+    $("#p5_classique").css("display", "none");
+
+    
+
   });
 
   $("#ok2").on("click", function () {
@@ -43,8 +91,11 @@ $(document).ready(function () {
     $("#classique").css("display", "none");
     $("#vs").css("display", "none");
     $("#panier").css("display", "none");
-    $("#p5").css("display", "none");
+    $("#p5_classique").css("display", "none");
+    $("#p5_vs").css("display", "none");
+    $("#p5_panier").css("display", "none");
     $("#notice").css("display", "none");
+    $("#barre").css("display", "none");
   });
 
   $("#ok3").on("click", function () {
@@ -53,116 +104,29 @@ $(document).ready(function () {
   });
 
   $("#notice").on("mouseenter", function () {
-    $("#pagectn").css("background-image", "url(img/panier.png)");
-    $("#p5").css("display", "none");
+    $("#pagectn").css("background-image", "url(img/classique.png)");
+    $("#p5_classique").css("display", "none");
+    $("#barre").css("display", "none");
   });
 
   $("#notice").on("mouseleave", function () {
     $("#pagectn").css("background-image", "none");
-    $("#p5").css("display", "block");
+    $("#p5_classique").css("display", "block");
+    $("#barre").css("display", "block");
   });
 
 });
 
-var typo = [];
-var fonts = ["Comic Sans MS", "Futura", "Courier New", "Montserrat", "Didot"];
-var index;
-var y = 0;
-var x = 10;
 var myInput;
-var myText;
-var stuff;
-
-function preload() {
-  img = loadImage('panier.svg');
-}
 
 function setup() {
   canvas = createCanvas(1002, 475.2);
-  canvas.parent("p5");
+  canvas.parent("p5_classique");
 
-  textSize(40);
-  textAlign(CENTER);
-  rectMode(CENTER);
-  imageMode(CENTER)
-
-  for (let i = 0; i < 50; i++) {
-    typo.push(new element());
-  }
-
-  paddle = new Paddle();
-
+  background(0, 255, 0);
   myInput = createInput('Aa');
-  myInput.parent("p5");
-  myInput.style('font-size', '25px');
-  myInput.size(AUTO, 30);
-  myInput.position(50, 20);
-  myInput.input(typing);
-
-  myText = '';
-  stuff='Aa';
-}
-
-function draw() {
-  background("#E6D6FF");
-
-  for (let i = 0; i < typo.length; i++) {
-    typo[i].move();
-    typo[i].display();
-    typo[i].checkPaddle(paddle);
-  }
-
-
-  paddle.display();
-  paddle.move();
-
-}
-
-
-function typing() {
-    stuff = this.value();
-}
-
-
-class element {
-  constructor() {
-    this.x = random(width);
-    this.y = random(-3000, 0);
-    this.c = color(0);
-    this.index = round(random(0, 4));
-  }
-
-  checkPaddle(p){
-    if (this.x < (p.x + p.w/2) && this.x > (p.x - p.w/2) && this.y > (p.y - p.h/2) && this.y < (p.y)){
-      this.c = color("#E6D6FF");
-    }
-  }
-
-  move() {
-    this.y = this.y + 1;
-  }
-
-  display() {
-    fill(this.c);
-    textFont(fonts[this.index]);
-    text(stuff, this.x, this.y);
-  }
-}
-
-class Paddle {
-  constructor() {
-    this.x = width/2;
-    this.y = height - 150;
-    this.w = 195;
-    this.h = 106;
-  }
-
-  move(){
-    this.x = mouseX;
-  }
-
-  display() {
-    noStroke();
-    image(img, this.x, this.y, this.w, this.h);
-  }
+      myInput.parent("barre");
+      myInput.style('font-size', '25px');
+      myInput.size(AUTO, 30);
+      myInput.position(50, 20);
 }

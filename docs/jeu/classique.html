@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <title>Le jeu Attrape-Font</title>
-    <link rel="preload" as="font" href="/fonts/PPMondwest-Regular.otf" type="font/opentype" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/fonts/Typefesse_Pleine.otf" type="font/opentype" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -21,7 +19,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
 
-    <link rel="stylesheet" href="css/attrapefont.css" />
+    <link rel="stylesheet" href="classique.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
@@ -31,7 +29,7 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script src="scripts.js" charset="utf-8"></script>
+    <script src="classique.js" charset="utf-8"></script>
   </head>
   <body>
     <header></header>
@@ -40,17 +38,14 @@
       <div id="pagectn" class="container"></div>
       <div class="consignectn"></div>
       <div id="croixctn">
-        <a href="index.html"><div class="croix"></div></a>
+        <a href="../index.html"><div class="croix"></div></a>
       </div>
 
       <div id="p5_classique"></div>
-
       <div id="button"class="container">
-        <button id="jouer" class="button">JOUER</button>
-        <button id="ok" class="button">OK</button>
-        <button id="classique" class="button">Classique</button>
-        <a href="jeu/vs.html" id="vs" class="button">Qui de nous 2 ?</button>
-        <a href="jeu/panier.html" id="panier" class="button">Panier-cueillette</a>
+        <a href="classique.html" id="classique" class="button">Classique</a>
+        <a href="vs.html" id="vs" class="button">Qui de nous 2 ?</a>
+        <a href="panier.html" id="panier" class="button">Panier-cueillette</a>
         <button id="ok2" class="button">Fini !</button>
         <button id="ok3" class="button">OK</button>
         <button id="notice" class="button">?</button>

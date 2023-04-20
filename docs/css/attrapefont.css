@@ -41,6 +41,20 @@ main {
   background-image: url("../img/croixnoire.png");
 }
 
+#barre{
+  display: none;
+  width:800px;
+  height:50px;
+  margin-bottom: 432px;
+  align-content: center;
+}
+
+#cat{
+  margin-top:30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
 .consignectn{
   position: absolute;
   width: 100%;
@@ -137,12 +151,6 @@ main {
   margin-top: 35%;
 }
 
-#p5{
-  background-color: #E6D6FF;
-  position: absolute;
-  display: none;
-}
-
 #notice{
   font-size: 15px;
   position: absolute;
@@ -151,3 +159,11 @@ main {
   box-shadow: none;
   margin-bottom: 45%;
 }
+
+#p5_classique{
+  background-color: #E6D6FF;
+  position: absolute;
+  display: none;
+}
+
+
