@@ -43,10 +43,11 @@ main {
   padding: 1em;
 }
 
-#clique {
+button {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 700;
   overflow: visible;
+
   position: fixed;
   top: var(--marge);
   right: 22%;
@@ -66,11 +67,11 @@ main {
   cursor: pointer;
 }
 
-#bouton:hover {
+button:hover {
   background-color: rgb(0, 0, 0, 0.1);
 }
 
-#bouton:active {
+button:active {
   transform: translate(3px, 3px);
   box-shadow: 0px 0px;
 }
@@ -119,11 +120,29 @@ img{
   margin-right: 8px;
 }
 
+.msg_mobile{
+  display: none;
+}
+
 
 @media screen and (max-width:800px){
 
   .haut, .memoire, .intro, .projets, #clique{
     display: none;
+  }
+
+  h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .msg_mobile{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
   }
 
 }
