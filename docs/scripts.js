@@ -112,13 +112,13 @@ $(document).ready(function () {
   $("#notice").on("mouseleave", function () {
     $("#pagectn").css("background-image", "none");
     $("#p5_classique").css("display", "block");
-    $("#barre").css("display", "block");
+    $("#barre").css("display", "flex");
   });
 
 });
 
 let typos = [];
-    let fonts = ["Antic Didone", "Bitter", "Climate Crisis", "Comfortaa", "Cormorant Garamond", "Courier Prime", "Goldman", "Modak", "Montserrat", "Oswald", "Pinyon Script", "Playfair Display", "Roboto Mono", "Sacramento", "Uncial Antiqua"];
+let fonts = ["Antic Didone", "Bitter", "Climate Crisis", "Comfortaa", "Cormorant Garamond", "Courier Prime", "Goldman", "Modak", "Montserrat", "Oswald", "Pinyon Script", "Playfair Display", "Roboto Mono", "Sacramento", "Uncial Antiqua"];
 
 let fontSize = 64;
 let gapSize = 45;

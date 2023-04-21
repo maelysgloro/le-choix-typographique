@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Bitter&family=Climate+Crisis&family=Comfortaa&family=Cormorant+Garamond&family=Courier+Prime&family=Goldman&family=Modak&family=Montserrat&family=Oswald&family=Pinyon+Script&family=Playfair+Display&family=Roboto+Mono&family=Sacramento&family=Uncial+Antiqua&display=swap');
+
 
 body {
     width: 100vw;
@@ -51,11 +53,19 @@ body {
   }
   
   #barre{
-    display: flex;
     width:800px;
     height:50px;
     margin-bottom: 432px;
-    align-content: center;
+
+  }
+
+  input{
+    position: absolute;
+    font-size: 25px;
+    width: 200px;
+    height: 30px;
+    margin-right: 500px;
+    margin-top: 15px;
   }
   
   #cat{
@@ -65,6 +75,7 @@ body {
   }
 
   #pagectn{
+    background-color: #E6D6FF;
     background-image: none;
     background-position: center;
     background-repeat: no-repeat;
@@ -163,4 +174,64 @@ body {
     background-color: #E6D6FF;
     position: absolute;
   }
-  
+
+  #questions{
+    height: 150px;
+  }
+
+  .choix{
+    width: 30%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .choix:hover{
+    background-color: #c3a3f4;
+  }
+
+  #didone{
+    font-family: "Antic Didone", serif;
+  }
+  #garamond{
+    display: none;
+    font-family: "Cormorant Garamond", serif;
+  }
+  #montserrat{
+    display: none;
+    font-family: "Montserrat", sans-serif;
+  }
+  #uncial{
+    display: none;
+    font-family: "Uncial Antiqua", cursive;
+  }
+
+  #climate{
+    font-family: "Climate Crisis", cursive;
+
+  }
+  #comfortaa{
+    display: none;
+    font-family: "Comfortaa", cursive;
+  }
+  #courier{
+    display: none;
+    font-family: "Courier Prime", monospace;
+  }
+  #oswald{
+    display: none;
+    font-family: "Oswald", sans-serif;
+  }
+
+
+  #values{
+    width:100px;
+    height: 100px;
+  }

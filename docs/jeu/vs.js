@@ -1,50 +1,91 @@
 $(document).ready(function () {
-    $("#notice").on("mouseenter", function () {
-      $("#pagectn").css("background-image", "url(../img/vs.png)");
-      $("#p5_vs").css("display", "none");
-      $("#barre").css("display", "none");
-    });
+  $("#notice").on("mouseenter", function () {
+    $("#pagectn").css("background-image", "url(../img/vs.png)");
+    $("#questions").css("display", "none");
+    $("#barre").css("display", "none");
+  });
 
-    $("#notice").on("mouseleave", function () {
-      $("#pagectn").css("background-image", "none");
-      $("#p5_vs").css("display", "block");
-      $("#barre").css("display", "flex");
-    });
+  $("#notice").on("mouseleave", function () {
+    $("#pagectn").css("background-image", "none");
+    $("#questions").css("display", "flex");
+    $("#barre").css("display", "flex");
+  });
 
 
-    $("#ok2").on("click", function () {
-      $(".container").css("justify-content", "center");
-      $("#pagectn").css("background-image", "url(../img/confirmation.png)");
-      $(".consignectn").css("background", "url(../img/consigne.png)");
-      $(".consignectn").css("background-position", "center");
-      $("#ok2").css("display", "none");
-      $("#ok3").css("display", "block");
-      $("#classique").css("display", "none");
-      $("#vs").css("display", "none");
-      $("#panier").css("display", "none");
-      $("#p5_vs").css("display", "none");
-      $("#notice").css("display", "none");
-      $("#barre").css("display", "none");
-    });
-  
-    $("#ok3").on("click", function () {
-      $("#pagectn").css("background-image", "url(../img/fin.png)");
-      $("#ok3").css("display", "none");
-    });
+  $("#ok2").on("click", function () {
+    $(".container").css("justify-content", "center");
+    $("#pagectn").css("background-image", "url(../img/confirmation.png)");
+    $(".consignectn").css("background", "url(../img/consigne.png)");
+    $(".consignectn").css("background-position", "center");
+    $("#ok2").css("display", "none");
+    $("#ok3").css("display", "block");
+    $("#classique").css("display", "none");
+    $("#vs").css("display", "none");
+    $("#panier").css("display", "none");
+    $("#questions").css("display", "none");
+    $("#notice").css("display", "none");
+    $("#barre").css("display", "none");
+  });
 
-    });
-    
-    
-    var myInput;
+  $("#ok3").on("click", function () {
+    $("#pagectn").css("background-image", "url(../img/fin.png)");
+    $("#ok3").css("display", "none");
+  });
 
-    function setup() {
-      canvas = createCanvas(1002, 475.2);
-      canvas.parent("p5_vs");
-    
-      background(0, 0, 255);
-      myInput = createInput('Aa');
-          myInput.parent("barre");
-          myInput.style('font-size', '25px');
-          myInput.size(AUTO, 30);
-          myInput.position(50, 20);
-    }
+
+  $("#didone").on("click", function () {
+    $("#didone").css("display", "none");
+    $("#climate").css("display", "none");
+    $("#garamond").css("display", "flex");
+    $("#comfortaa").css("display", "flex");
+  });
+
+  $("#climate").on("click", function () {
+    $("#didone").css("display", "none");
+    $("#climate").css("display", "none");
+    $("#garamond").css("display", "flex");
+    $("#comfortaa").css("display", "flex");
+  });
+
+  $("#garamond").on("click", function () {
+    $("#garamond").css("display", "none");
+    $("#comfortaa").css("display", "none");
+    $("#montserrat").css("display", "flex");
+    $("#courier").css("display", "flex");
+  });
+
+  $("#comfortaa").on("click", function () {
+    $("#garamond").css("display", "none");
+    $("#comfortaa").css("display", "none");
+    $("#montserrat").css("display", "flex");
+    $("#courier").css("display", "flex");
+  });
+
+  $("#montserrat").on("click", function () {
+    $("#montserrat").css("display", "none");
+    $("#courier").css("display", "none");
+    $("#uncial").css("display", "flex");
+    $("#oswald").css("display", "flex");
+  });
+
+  $("#courier").on("click", function () {
+    $("#montserrat").css("display", "none");
+    $("#courier").css("display", "none");
+    $("#uncial").css("display", "flex");
+    $("#oswald").css("display", "flex");
+  });
+
+
+});
+
+/* const input = document.querySelector("input");
+const log = document.getElementsByClassName("choix");
+
+input.addEventListener("input", updateValue);
+
+function updateValue(e) {
+  log.innerHTML = e.target.value;
+} */
+
+
+

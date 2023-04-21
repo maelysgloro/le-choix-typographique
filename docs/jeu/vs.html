@@ -1,63 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Le jeu Attrape-Font</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700,900", "Montserrat:400,900"],
-        },
-      });
-    </script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
 
-    <link rel="stylesheet" href="vs.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>Le jeu Attrape-Font</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700,900", "Montserrat:400,900"],
+      },
+    });
+  </script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" href="vs.css" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="vs.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <header></header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 
-    <main>
-      <div id="pagectn" class="container"></div>
-      <div class="consignectn"></div>
-      <div id="croixctn">
-        <a href="../index.html"><div class="croix"></div></a>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="vs.js" charset="utf-8"></script>
+</head>
+
+<body>
+  <header></header>
+
+  <main>
+    <div id="pagectn" class="container"></div>
+    <div class="consignectn"></div>
+    <div id="croixctn">
+      <a href="../index.html">
+        <div class="croix"></div>
+      </a>
+    </div>
+
+    <div id="button" class="container">
+      <a href="classique.html" id="classique" class="button">Classique</a>
+      <a href="vs.html" id="vs" class="button">Qui de nous 2 ?</a>
+      <a href="panier.html" id="panier" class="button">Panier-cueillette</a>
+      <button id="ok2" class="button">Fini !</button>
+      <button id="ok3" class="button">OK</button>
+      <button id="notice" class="button">?</button>
+    </div>
+    <div id="barre" class="container">
+      <input type="text" id="champ" placeholder="Aa">
+      <p id="cat">Catégorie : Sans sérif</p>
+    </div>
+
+    <div id="questions" class="container">
+      <div id="didone" class="choix">
+        <p>Aa</p>
       </div>
-
-      <div id="p5_vs"></div>
-      <div id="button"class="container">
-        <a href="classique.html" id="classique" class="button">Classique</a>
-        <a href="vs.html" id="vs" class="button">Qui de nous 2 ?</a>
-        <a href="panier.html" id="panier" class="button">Panier-cueillette</a>
-        <button id="ok2" class="button">Fini !</button>
-        <button id="ok3" class="button">OK</button>
-        <button id="notice" class="button">?</button>
+      <div id="garamond" class="choix">
+        <p>Aa</p>
       </div>
-      <div id="barre" class="container">
-        <p id="cat">Catégorie : Sans sérif</p>
+      <div id="montserrat" class="choix">
+        <p>Aa</p>
       </div>
+      <div id="uncial" class="choix">
+        <p>Aa</p>
+      </div>
+      <p id="v">VS</p>
+      <div id="climate" class="choix">
+        <p>Aa</p>
+      </div>
+      <div id="comfortaa" class="choix">
+        <p>Aa</p>
+      </div>
+      <div id="courier" class="choix">
+        <p>Aa</p>
+      </div>
+      <div id="oswald" class="choix">
+        <p>Aa</p>
+      </div>
+    </div>
 
+  </main>
 
+  <script>
+    const input = document.querySelector("input");
+    const elements = document.getElementsByClassName("choix");
+    input.addEventListener("input", updateValue);
 
-    </main>
+    function updateValue(e) {
+      elements.forEach(element => {
+        let newValue = (e.target.value=="") ? "Aa" : e.target.value; 
+        element.textContent = newValue;
+      })
+    };
 
-    <footer></footer>
-  </body>
+  </script>
+
+  <footer></footer>
+</body>
+
 </html>
