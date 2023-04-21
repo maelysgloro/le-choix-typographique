@@ -7,7 +7,7 @@ $(document).ready(function () {
     $("#circulaire").css("color", "white");
     $("#circulaire").css("background-color", "#6100FF");
     $("#p5").css("display", "block");
-    $("input").css("display", "block");
+    $("#input").css("display", "flex");
 
     $("#emotion").css("color", "#6100FF");
     $("#emotion").css("background-color", "white");
@@ -25,7 +25,7 @@ $(document).ready(function () {
     $("#circulaire").css("color", "#6100FF");
     $("#circulaire").css("background-color", "white");
     $("#p5").css("display", "none");
-    $("input").css("display", "none");
+    $("#input").css("display", "none");
 
     $("#choix").css("color", "#6100FF");
     $("#choix").css("background-color", "white");
@@ -43,7 +43,7 @@ $(document).ready(function () {
     $("#circulaire").css("color", "#6100FF");
     $("#circulaire").css("background-color", "white");
     $("#p5").css("display", "none");
-    $("input").css("display", "none");
+    $("#input").css("display", "none");
 
     $(".consignectn").css("background-image", "url(img/choix.png)");
   });
@@ -64,7 +64,6 @@ function setup() {
   myInput.style('font-size', '25px');
   myInput.style('color', '#6100FF');
   myInput.size(200, 30);
- // myInput.position(670, 485);
   angleMode(DEGREES);
   textAlign(CENTER);
   

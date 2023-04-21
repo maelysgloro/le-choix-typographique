@@ -130,7 +130,7 @@ img{
 
 @media screen and (max-width:800px){
 
-  .haut, .memoire, .intro, .projets, #clique{
+  main{
     display: none;
   }
 
@@ -146,6 +146,7 @@ img{
     flex-direction: column;
     width: 50%;
     height: 50%;
+    margin: 100px;
   }
 
 }
