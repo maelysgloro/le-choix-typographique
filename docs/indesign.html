@@ -1,60 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Le jeu Attrape-Font</title>
-    <link rel="preload" as="font" href="/fonts/PPMondwest-Regular.otf" type="font/opentype" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/fonts/Typefesse_Pleine.otf" type="font/opentype" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700,900", "Montserrat:400,900"],
-        },
-      });
-    </script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
 
-    <link rel="stylesheet" href="css/indesign.css" />
+<head>
+  <meta charset="utf-8" />
+  <title>Le jeu Attrape-Font</title>
+  <link rel="preload" as="font" href="/fonts/PPMondwest-Regular.otf" type="font/opentype" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/Typefesse_Pleine.otf" type="font/opentype" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Climate Crisis", "Londrina Outline", "Modak", "Nunito Sans:400italic,400,700,900", "Montserrat:400,900"],
+      },
+    });
+  </script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" href="css/indesign.css" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="indesign.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <header></header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
 
-    <main>
-      <div class="consignectn"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="indesign.js" charset="utf-8"></script>
+</head>
 
-      <div id="p5"></div>
-      <div id="input"></div>
+<body>
+  <header></header>
 
-      <div class="container">
-        <button id="circulaire" class="button">Liste circulaire</button>
-        <button id="emotion" class="button">Curseurs d'émotion</button>
-        <button id="choix" class="button">Choix multiples</button>
+  <main>
+    <div class="consignectn"></div>
+
+    <div id="p5"></div>
+    <div id="input"></div>
+
+    <div id="curseurs">
+      <div class="curseur">
+        <label for="temp1">Sérieux</label>
+        <input class="emotion" type="range" id="temp1" name="temp1" list="values" min="1" max="5" step="1" />
+        <label for="temp1">Fantaisie</label>
       </div>
-
-      <a href="index.html"><div class="croix"></div></a>
-
-    </main>
-    <div class="msg_mobile">
-      <h2>Désolé...</h2>
-      <p>Ce mini-site n’est pas encore disponible en version mobile. Pour y accéder, rends-toi sur un ordinateur !</p>
+      <div class="curseur">
+        <label for="temp2">Neutre</label>
+        <input class="emotion" type="range" id="temp2" name="temp1" list="values" min="1" max="5" step="1" />
+        <label for="temp2">Expressif</label>
+      </div>
+      <div class="curseur">
+        <label for="temp3">Organique</label>
+        <input class="emotion" type="range" id="temp3" name="temp1" list="values" min="1" max="5" step="1" />
+        <label for="temp3">Géométrique</label>
+      </div>
+      <input type="text" id="champ" value="Aa">
+      <p id="font">Montserrat</p>
     </div>
-    <footer></footer>
-  </body>
+
+    <div class="container">
+      <button id="circulaire" class="button">Liste circulaire</button>
+      <button id="emotion" class="button">Curseurs d'émotion</button>
+      <button id="choix" class="button">Choix multiples</button>
+    </div>
+
+    <a href="index.html">
+      <div class="croix"></div>
+    </a>
+
+  </main>
+
+  <div class="msg_mobile">
+    <h2>Désolé...</h2>
+    <p>Ce mini-site n’est pas encore disponible en version mobile. Pour y accéder, rends-toi sur un ordinateur !</p>
+  </div>
+  <footer></footer>
+  <script>
+    const value = document.getElementById("champ");
+    const input = document.getElementsByClassName("emotion")
+    const log = document.getElementById("font");
+    input[0].addEventListener("change", (event) => {
+      value.style.fontFamily = fonts[event.target.value];
+      log.textContent = fonts[event.target.value];
+    });
+    input[1].addEventListener("change", (event) => {
+      let index = Math.floor(Math.random() * 15);
+      value.style.fontFamily = fonts[index];
+      log.textContent = fonts[index];
+    });
+    input[2].addEventListener("change", (event) => {
+      let index = Math.floor(Math.random() * 15);
+      value.style.fontFamily = fonts[index];
+      log.textContent = fonts[index];
+    });
+
+  
+    
+    
+ 
+
+  </script>
+</body>
+
 </html>

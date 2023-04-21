@@ -11,6 +11,7 @@ $(document).ready(function () {
 
     $("#emotion").css("color", "#6100FF");
     $("#emotion").css("background-color", "white");
+    $("#curseurs").css("display", "none");
 
     $("#choix").css("color", "#6100FF");
     $("#choix").css("background-color", "white");
@@ -21,6 +22,7 @@ $(document).ready(function () {
   $("#emotion").on("click", function () {
     $("#emotion").css("color", "white");
     $("#emotion").css("background-color", "#6100FF");
+    $("#curseurs").css("display", "flex");
     
     $("#circulaire").css("color", "#6100FF");
     $("#circulaire").css("background-color", "white");
@@ -39,6 +41,7 @@ $(document).ready(function () {
     
     $("#emotion").css("color", "#6100FF");
     $("#emotion").css("background-color", "white");
+    $("#curseurs").css("display", "none");
 
     $("#circulaire").css("color", "#6100FF");
     $("#circulaire").css("background-color", "white");

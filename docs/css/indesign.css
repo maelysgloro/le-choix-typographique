@@ -75,7 +75,7 @@ main {
   border-radius: 30px;
   border: 2px solid #6100FF;
   box-shadow: 3px 3px #6100FF;
-  padding: 3px 40px 3px 40px;
+  padding: 3px 30px 3px 30px;
   justify-content: center;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -108,6 +108,101 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#curseurs{
+  display: none;
+  color: #6100FF;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.curseur{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+   appearance: none;
+   background: transparent;
+   cursor: pointer;
+   width: 15rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+ outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #6100FF;
+  border-radius: 0.5rem;
+  height: 0.5rem;  
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: white;
+  border: 2px solid #6100FF;
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {   
+ border: 1px solid #6100FF;
+ outline: 3px solid #6100FF;
+ outline-offset: 0.125rem; 
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #6100FF;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: white;
+  border: 2px solid #6100FF;
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+ border: 1px solid #6100FF;
+ outline: 3px solid #6100FF;
+ outline-offset: 0.125rem; 
+}
+
+#champ{
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    width: 200px;
+    height: 30px;
+    color: #6100FF;
+    margin-top: 50px;
 }
 
 @media screen and (max-width:900px){

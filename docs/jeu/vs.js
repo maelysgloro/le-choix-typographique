@@ -78,14 +78,4 @@ $(document).ready(function () {
 
 });
 
-/* const input = document.querySelector("input");
-const log = document.getElementsByClassName("choix");
-
-input.addEventListener("input", updateValue);
-
-function updateValue(e) {
-  log.innerHTML = e.target.value;
-} */
-
-
 
