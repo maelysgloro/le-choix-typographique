@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Romie";
+    src: url("../fonts/RomieTrial-Italic.otf");
+  }
+
+:root {
+    --marge: 80px;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  
+  main {
+    width: 100vw;
+    max-width: 100%;
+    overflow: visible;
+    margin-left: var(--marge);
+    margin-top: var(--marge);
+    margin-right: var(--marge);
+  }
+  
+  h1 {
+    display: inline;
+    font-family: "Modak", sans-serif;
+    font-size: 150px;
+    margin: 0;
+    vertical-align: top;
+  }
+
+ h2{
+    font-size: 25px;
+    margin: 0;
+ }
+
+ .modak{
+    font-size: 28px;
+    font-family: "Modak", sans-serif;
+ }
+
+ .mondwest{
+    font-size: 28px;
+    font-family: "PP Mondwest", serif;
+ }
+
+ .romie{
+    font-family: "Romie", serif;
+ }
+
+ p{
+    margin-top: 60px;
+    width: 50%;
+ }
+
+ .gras{
+    font-weight: 700;
+ }
