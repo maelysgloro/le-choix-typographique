@@ -32,21 +32,20 @@
   }
 
  h2{
-    font-size: 25px;
+    font-size: 28px;
     margin: 0;
  }
 
  .modak{
-    font-size: 28px;
     font-family: "Modak", sans-serif;
  }
 
  .mondwest{
-    font-size: 28px;
     font-family: "PP Mondwest", serif;
  }
 
  .romie{
+    font-size: 25px;
     font-family: "Romie", serif;
  }
 
@@ -58,3 +57,17 @@
  .gras{
     font-weight: 700;
  }
+
+ 
+@media (hover: none) { 
+   h2{
+    font-size:35px;
+   }
+
+   .romie{
+    font-size:32px;
+   }
+   p{
+    font-size: 25px;
+   }
+  }
