@@ -154,3 +154,24 @@ img{
   }
 
 }
+
+@media (hover: none) { 
+  main{
+    display: none;
+  }
+
+  h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .msg_mobile{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    margin: 100px;
+  }
+}
