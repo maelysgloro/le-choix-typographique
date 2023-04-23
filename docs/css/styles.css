@@ -85,9 +85,13 @@ button:active {
   width: 60%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   margin-top: 50px;
+}
+
+.para{
+  width :60%;
 }
 
 .projets {
@@ -128,7 +132,7 @@ img{
 }
 
 
-@media screen and (max-width:800px){
+@media screen and (min-width : 320px) and (max-width:800px){
 
   main{
     display: none;
