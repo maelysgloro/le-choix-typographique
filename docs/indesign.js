@@ -15,6 +15,7 @@ $(document).ready(function () {
 
     $("#choix").css("color", "#6100FF");
     $("#choix").css("background-color", "white");
+    $("#multiples").css("display", "none");
 
     $(".consignectn").css("background-image", "url(img/circulaire.png)");
   });
@@ -31,6 +32,7 @@ $(document).ready(function () {
 
     $("#choix").css("color", "#6100FF");
     $("#choix").css("background-color", "white");
+    $("#multiples").css("display", "none");
 
     $(".consignectn").css("background-image", "url(img/emotion.png)");
   });
@@ -38,6 +40,7 @@ $(document).ready(function () {
   $("#choix").on("click", function () {
     $("#choix").css("color", "white");
     $("#choix").css("background-color", "#6100FF");
+    $("#multiples").css("display", "flex");
     
     $("#emotion").css("color", "#6100FF");
     $("#emotion").css("background-color", "white");
@@ -50,6 +53,7 @@ $(document).ready(function () {
 
     $(".consignectn").css("background-image", "url(img/choix.png)");
   });
+
 
 
 });

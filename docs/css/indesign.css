@@ -205,6 +205,54 @@ input[type="range"]:focus::-moz-range-thumb {
     margin-top: 50px;
 }
 
+#multiples{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height:200px;
+  color: #6100FF;
+}
+
+#questions{
+  width: 500px;
+  height: 70px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choix{
+  width: 50%;
+  height: 100%;
+  border: 3px solid #6100FF;
+  border-radius: 4px;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  padding: 3px 30px 3px 30px;
+}
+
+.choix:hover{
+  background-color: #E6D6FF;
+}
+
+#champ3{
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  width: 200px;
+  height: 30px;
+  color: #6100FF;
+  margin-top: 50px;
+}
+
+
+
 @media screen and (max-width:900px){
 
   main{
